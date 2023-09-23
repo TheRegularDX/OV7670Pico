@@ -1,5 +1,5 @@
 # [DX] 2023
-# Example code for using an OV7670 parallel camera module with a Raspberry Pi Pico with CircuitPython
+# Example code for using an OV7670 parallel camera module on a Raspberry Pi Pico with CircuitPython
 # takes a picture and saves it in the SD card
 
 import board
