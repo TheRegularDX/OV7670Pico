@@ -30,7 +30,7 @@ from adafruit_ov7670 import (
 with digitalio.DigitalInOut(board.GP22) as shutdown:
     shutdown.switch_to_output(True)
     time.sleep(0.001)
-    bus = busio.I2C(board.GP9, board.GP8) # scl sda
+    bus = busio.I2C(board.GP9, board.GP8) # SCL, SDA
 
 cam = OV7670(
     bus,
@@ -61,10 +61,10 @@ cam.colorspace = OV7670_COLOR_RGB # RGB565 colorspace
 
 
 # Set up SD card
-sck = board.GP2
-si = board.GP3
-so = board.GP4
-cs = board.GP5
+sck = board.GP2 # SD card pin 6 (SCK)
+si = board.GP3 # SD card pin 3 (MOSI)
+so = board.GP4 # SD card pin 8 (MISO)
+cs = board.GP5 # SD card pin 2 (CS)
 spi = busio.SPI(sck, si, so)
 sdcard = sdcardio.SDCard(spi, cs)
 vfs = storage.VfsFat(sdcard)
