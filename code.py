@@ -54,7 +54,7 @@ cam = OV7670(
  
 cam.size = OV7670_SIZE_DIV2 # 340 x 240
 cam.colorspace = OV7670_COLOR_RGB # RGB565 colorspace
-#cam.colorspace = OV7670_COLOR_RGB # Uncomment to use YUV colorspace
+#cam.colorspace = OV7670_COLOR_YUV # Uncomment to use YUV colorspace
 # cam.flip_x = False # Uncomment to flip X axis
 # cam.flip_y = True  # Uncomment to flip Y axis
 #cam.test_pattern = OV7670_TEST_PATTERN_COLOR_BAR # Uncomment to see the camera's bar test pattern 
